@@ -1,0 +1,263 @@
+@import "./styles/Button.css";
+@import "./styles/CheckBox.css";
+@import "./styles/Font.css";
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Titillium Web", sans-serif;
+}
+
+/*═════════════════════════════════════════════════════════════*/
+/*Variables and root config*/
+/*═════════════════════════════════════════════════════════════*/
+
+:root {
+  --dark-blue: #023E8A;
+    /* ok */
+  --medium-blue: #0077B6;
+  --medium-blue-light-shade: #4099C8;
+  --medium-blue-dark-shade: #006BA4;
+  --medium-blue-glass: #0077B6B3;
+  --medium-blue-glass-light-shade: #4099C8B3; 
+  --medium-blue-glass-dark-shade: #005F92B3; 
+    /* ok */
+  --green: #418170;
+  --green-light-shade: #56A28E;
+  --green-dark-shade: #3F7768;
+  --green-glass: #418170B3;
+  --green-glass-light-shade: #56A28EB3;
+  --green-glass-dark-shade: #3F7768B3;
+    /* ok */
+  --pale-blue: #D0FEFE;
+  --pale-blue-light-shade: #F8FFFF;
+  --pale-blue-dark-shade: #9CBFBF;
+  --pale-blue-glass: #D0FEFE80;
+  --pale-blue-glass-light-shade: #F8FFFF99;
+  --pale-blue-glass-dark-shade: #9CBFBF80;
+    /* ok */
+  --success: #008630;
+  --success-light-shade: #40A464;
+  --success-dark-shade: #007229;
+  --success-glass: #008630B3;
+  --success-glass-light-shade: #40A464B3;
+  --success-glass-dark-shade: #007229CC;
+    /* ok */
+  --danger: #87192A; 
+  --danger-light-shade: #A5535F;
+  --danger-dark-shade: #731524;
+  --danger-glass: #87192AB3;
+  --danger-glass-light-shade: #A5535FB3;
+  --danger-glass-dark-shade: #731524B3;
+  /* ok */
+  --warning: #F1C21B;
+  --warning-light-shade: #F7DD82;
+  --warning-dark-shade: #CDA517;
+  --warning-glass: #F1C21BB3;
+  --warning-glass-light-shade: #F7DD82B3;
+  --warning-glass-dark-shade: #CDA517B3;
+    /* ok */
+  --serious-warning: #C35200;
+  --serious-warning-light-shade: #D5864D;
+  --serious-warning-dark-shade: #9C4200;
+  --serious-warning-glass: #C35200B3;
+  --serious-warning-glass-light-shade: #D5864DB3;
+  --serious-warning-glass-dark-shade: #9C4200B3;
+    /* ok */
+  --dark: #001b3d;
+  --dark-light-shade: #263D5A;
+  --dark-dark-shade: #000E1F;
+  --dark-glass: #001b3dB3;
+  --dark-glass-light-shade: #193250B3;
+  --dark-glass-dark-shade: #000E1FB3;
+
+  --white: #ffffff;
+  --white-glass: #ffffff80;
+  --black: #000000;
+  --black-glass: #00000080;
+
+  --light-gray: #d3d3d3;
+
+  --box-shadow: 0px 0px 3px 0px #00000066 inset;
+  
+  --small: 1.8rem;
+  --medium: 2.5rem;
+  --large: 3rem;
+  --button-size: var(--medium);
+
+  
+  height: 100%;
+  width: 100%;
+  
+  background-color: var(--dark);
+  color: var(--pale-blue);
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239C92AC' fill-opacity='0.05' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+
+  
+}
+
+main{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+/*═════════════════════════════════════════════════════════════*/
+/*Styles*/
+/*═════════════════════════════════════════════════════════════*/
+
+.primary{
+  background-color: var(--medium-blue);
+  color: var(--white); 
+  --shadow: var(--medium-blue-glass-light-shade);
+  --hover: var(--medium-blue-light-shade);
+  --active: var(--medium-blue-dark-shade);
+}
+
+.secondary{
+  background-color: var(--green);
+  color: var(--white); 
+  --shadow: var(--green-glass-light-shade);
+  --hover: var(--green-light-shade);
+  --active: var(--green-dark-shade);
+}
+
+.light{
+  background-color: var(--pale-blue);
+  color: var(--dark); 
+  --shadow: var(--pale-blue-glass-light-shade); 
+  --hover: var(--pale-blue-light-shade);
+  --active: var(--pale-blue-dark-shade);
+  text-shadow: 0px 0px 0px var(--dark) !important;
+}
+
+.dark{
+  background-color: var(--dark);
+  color: var(--white); 
+  --shadow: var(--dark-glass-light-shade); 
+  --hover: var(--dark-light-shade);
+  --active: var(--dark-dark-shade);
+}
+
+.success{
+  background-color: var(--success);
+  color: var(--white); 
+  --shadow: var(--success-glass-light-shade); 
+  --hover: var(--success-light-shade);
+  --active: var(--success-dark-shade);
+  
+}
+
+.danger{
+  background-color: var(--danger);
+  color: var(--white); 
+  --shadow: var(--danger-glass-light-shade); 
+  --hover: var(--danger-light-shade);
+  --active: var(--danger-dark-shade);
+}
+
+.warning{
+  background-color: var(--warning);
+  color: var(--dark-dark-shade); 
+  --shadow: var(--warning-glass-light-shade); 
+  --hover: var(--warning-light-shade);
+  --active: var(--warning-dark-shade);
+}
+
+.serious-warning{
+  background-color: var(--serious-warning);
+  color: var(--pale-blue-light-shade); 
+  --shadow: var(--serious-warning-glass-light-shade); 
+  --hover: var(--serious-warning-light-shade);
+  --active: var(--serious-warning-dark-shade);
+}
+  
+.dashed{
+  outline: 1px dashed var(--hover);
+  --shadow: var(--medium-blue-glass-light-shade);
+  --outline-style: dashed; 
+}
+
+
+/*═════════════════════════════════════════════════════════════*/
+/*Glass*/
+/*═════════════════════════════════════════════════════════════*/
+
+.glass{
+  background-color: var(--pale-blue-glass-light-shade);
+  box-shadow: 0 8px 32px 0 #1f26875e;
+  backdrop-filter: blur( 2px );
+  -webkit-backdrop-filter: blur( 2px );
+  border: 1px solid #ffffff2e;
+  color: var(--pale-blue); 
+  text-shadow: 1px 1px 2px var(--dark) !important;
+  --hover: var(--pale-blue-glass-light-shade);
+  --active: var(--pale-blue-glass-dark-shade);
+}
+
+.primary.glass{
+  background-color: var(--medium-blue-glass);
+  color: var(--pale-blue); 
+  --hover: var(--medium-blue-glass-light-shade);
+  --active: var(--medium-blue-glass-dark-shade);
+}
+
+.secondary.glass{
+  background-color: var(--green-glass);
+  color: var(--pale-blue-light-shade); 
+  --hover: var(--green-glass-light-shade);
+  --active: var(--green-glass-dark-shade);
+}
+
+.light.glass{
+  background-color: var(--pale-blue-glass);
+  color: var(--pale-blue-light-shade); 
+  --hover: var(--pale-blue-glass-light-shade);
+  --active: var(--pale-blue-glass-dark-shade);
+}
+
+.dark.glass{
+  background-color: var(--dark-glass);
+  color: var(--pale-blue); 
+  --hover: var(--dark-glass-light-shade);
+  --active: var(--dark-glass-dark-shade);
+}
+
+.success.glass{
+  background-color: var(--success-glass);
+  color: var(--pale-blue-light-shade); 
+  --hover: var(--success-glass-light-shade);
+  --active: var(--success-glass-dark-shade);
+}
+
+.danger.glass{
+  background-color: var(--danger-glass);
+  color: var(--pale-blue-light-shade);
+  --hover: var(--danger-glass-light-shade);
+  --active: var(--danger-glass-dark-shade); 
+}
+
+.warning.glass{
+  background-color: var(--warning-glass);
+  color: var(--pale-blue-light-shade); 
+  --hover: var(--warning-glass-light-shade);
+  --active: var(--warning-glass-dark-shade);
+}
+
+.serious-warning.glass{
+  background-color: var(--serious-warning-glass);
+  color: var(--pale-blue-light-shade); 
+  --hover: var(--serious-warning-glass-light-shade);
+  --active: var(--serious-warning-glass-dark-shade);
+}
+
+
+fieldset{
+  border: 1px solid var(--medium-blue-light-shade);
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+  width: 40vw;
+  background-color: #ffffff33;
+  
+}
