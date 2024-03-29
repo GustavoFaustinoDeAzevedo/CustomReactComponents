@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 
-
+ 
 export default function Button( {buttonID, ...props} ) {
   const typeArray = [
     "primary",
