@@ -1,6 +1,6 @@
-@import "./styles/Button.css";
-@import "./styles/CheckBox.css";
-@import "./styles/Font.css";
+@import "./components/Button.css";
+@import "./components/CheckBox.css";
+@import "./fonts/Font.css";
 
 *{
   box-sizing: border-box;
