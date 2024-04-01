@@ -4,7 +4,6 @@ export default function DefaultButtons({style}) {
   const glass = style === "glass";
   return (
     <>
-      <legend>{glass?'Glass':'Default'} Styles</legend>
       <Button type="primary" glass={glass}>
         Primary
       </Button>

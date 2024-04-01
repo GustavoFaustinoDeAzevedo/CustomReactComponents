@@ -1,21 +1,15 @@
 import "./App.css";
 import DivOptions from "./components/DivOptions.jsx";
 import Buttons from "./components/Buttons.jsx";
+import Examples from "./components/Examples.jsx";
 
 export default function App() {
   return (
     <main>
       <DivOptions />
-      <fieldset>
-        <Buttons style="default"/>     
-      </fieldset>
-      <br />
-      <br />
-      <fieldset>
-        <Buttons style="glass"/>
-      </fieldset>
-      <br />
-      <br />
+      <Examples title="Default Style" style="default"/>
+       <Examples title="Glass Style" style="glass"/>
+
     </main>
   );
 }
